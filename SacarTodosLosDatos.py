@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import urllib.request
 
-from utils.Constantes import user_agents
+from utils.UserAgents import user_agents
 
 descargas_dir = os.path.join(os.getcwd(), "descargas")
 os.makedirs(descargas_dir, exist_ok=True)
@@ -46,6 +46,6 @@ try:
                 with urllib.request.urlopen(req) as response, open(ruta_archivo, 'wb') as out_file:
                     out_file.write(response.read())
 
-    print("✅ Descargas finalizadas.")
+    print("Descargas finalizadas.")
 finally:
     driver.quit()

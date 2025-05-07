@@ -7,7 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 import urllib.request
 
-from utils.Constantes import user_agents
+from utils.UserAgents import user_agents
 
 descargas_dir = os.path.join(os.getcwd(), "descargasSemanales")
 os.makedirs(descargas_dir, exist_ok=True)
@@ -37,13 +37,11 @@ try:
                 nombre_archivo = enlace_zip.split("/")[-1]
 
                 if nombre_archivo in nombres_existentes:
-                    print(f"Ya descargado: {nombre_archivo} - Fecha: {fecha}")
                     break
 
                 ruta_archivo = os.path.join(descargas_dir, nombre_archivo)
                 user_agent = random.choice(user_agents)
 
-                print(f"Descargando {nombre_archivo} - Fecha: {fecha} con User-Agent: {user_agent}")
 
                 req = urllib.request.Request(
                     enlace_zip,
