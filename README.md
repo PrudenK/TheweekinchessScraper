@@ -1,3 +1,8 @@
+## TheweekinchessScraper
+
+Proyecto destinado a descargar las partidas subidas en `https://theweekinchess.com/twic`: 
+
+
 ### Descomprimir todos los zips en `descargas`:
 
 ```bash
